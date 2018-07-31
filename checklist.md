@@ -1,17 +1,17 @@
-# Which points have to be done to write a library:*
+# Which points have to be done to write a library:
 
 ## Brainstorming: 
 - [ ] What is the need for writing this library
 - [ ] What should the library be able to do - which functions.
 
-## Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]): 
-- [ ] install cookiecutter: 
+## Folder and files organisation as e.g. with cookiecutter ([Cookiecutter documentation](http://cookiecutter.readthedocs.io/en/latest/index.html)): 
+- [ ] Install cookiecutter (different options): 
 ```
 $ pip install --user cookiecutter
 $ conda install cookiecutter
 $ sudo apt-get install cookiecutter
 ```
-- [ ] chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
+- [ ] Chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 ```
 $ git clone git@github.com:audreyr/cookiecutter-pypackage.git
 $ cookiecutter cookiecutter-pypackage/
@@ -20,7 +20,7 @@ Or directly from the repository (gh: Github):
 ```
 $ cookiecutter gh:audreyr/cookiecutter-pypackage
 ```
-Cookiecutter generates then a project corresponding to your entered values with the following structre: 
+Cookiecutter generates then a project corresponding to your entered values with the following structre: <br/>
 project_name\
 - AUTHORS.rst
 - CONTRIBUTING.rst
@@ -55,10 +55,15 @@ project_name\
 
 ## Testing and code writing:
 - [ ] Install pytest: 
-- $ pip install -U pytest
-- [ ] Write your tests ([[https://docs.pytest.org/en/latest/getting-started.html][Getting started with Pytest]]): 
+```
+$ pip install -U pytest
+```
+- [ ] Write your tests ([Pytest Introduction](https://docs.pytest.org/en/latest/getting-started.html "Getting started with Pytest")): 
 - The test_file (tests/test_project_name_test.py) as well as the test function names need to start with 'test_'.
-- import the code-file (project_name.py): 'import project_name as project_name_shortcut'
+- import the code-file (project_name.py):
+```python
+import project_name as project_name_shortcut
+```
 - write test functions: 'assert' expected outcome to library generated outcome
 - The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
 - [ ] Write your code: 
