@@ -27,7 +27,7 @@ project_name\
 - *project_name_test*
   - cli.py
   - project_name_test.py
-  - __init__.py
+  - \_\_init\_\_.py
 - *docs*
   - authors.rst
   - conf.py
@@ -48,7 +48,7 @@ project_name\
 - setup.cfg
 - setup.py
 - *tests*
-  - __init__.py
+  - \_\_init\_\_.py
   - test_project_name_test.py
 - tox.ini
 - travis_pypi_setup.py 
