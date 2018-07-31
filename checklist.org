@@ -1,7 +1,7 @@
 *Which points have to be done to write a library:*
 
 * TODO: brainstorming: 
-** TODO: What is the need for writing this library
+** [] What is the need for writing this library
 ** TODO: What should the library be able to do - which functions.
 * TODO: folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]): 
 ** TODO: install cookiecutter: 
