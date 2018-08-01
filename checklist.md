@@ -37,18 +37,18 @@ In case that the code file is not in the tests folder, but in another folder (e.
 ```
 $ ln -s path/to/code_file/folder link/destination
 ```
-The following folder structure can be used as an example:
+The following folder structure can be used as an example: <br/>
 \project <br/>
 | <br/>
 -- CodeFolder <br/>
-   | <br/>
-   -- CodeFile.py <br/>
+&nbsp;&nbsp;   | <br/>
+&nbsp;&nbsp;   -- CodeFile.py <br/>
 -- tests <br/>
-   | <br/>
-   -- test_file.py <br/>
-   -- CodeFolder (link) <br/>
-      | <br/>
-      -- CodeFile.py <br/>
+&nbsp;&nbsp;   | <br/>
+&nbsp;&nbsp;   -- test_file.py <br/>
+&nbsp;&nbsp;   -- CodeFolder (link) <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
 Then, the code-file can be imported as the following:
 ```python
 import CodeFolder.CodeFile as shortcut
