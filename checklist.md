@@ -41,14 +41,15 @@ The following folder structure can be used as an example: <br/>
 \project <br/>
 | <br/>
 -- CodeFolder <br/>
-&nbsp;&nbsp;   | <br/>
-&nbsp;&nbsp;   -- CodeFile.py <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;   | <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;   -- CodeFile.py <br/>
 -- tests <br/>
-&nbsp;&nbsp;   | <br/>
-&nbsp;&nbsp;   -- test_file.py <br/>
-&nbsp;&nbsp;   -- CodeFolder (link) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;   | <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;   -- test_file.py <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;   -- CodeFolder (link) <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
+
 Then, the code-file can be imported as the following:
 ```python
 import CodeFolder.CodeFile as shortcut
