@@ -125,15 +125,15 @@ Uploading your library on PyPI makes it directly public. In case you would first
 - [ ] register on PyPI / TestPyPI
 - [ ] if no setup.py file is available it has to be written. This file is an build script for setuptools.
 - [ ] install the latest version of wheel:
-```python
+```
 $ python3 -m pip install --user --upgrade setuptools wheel
 ```
 - [ ] build archives based on the setup.py file. This command should generate the dist folder, containing two files:
-```python
+```
 $ python3 setup.py sdist bdist_wheel
 ```
 - [ ] install twine:
-```python
+```
 $ python3 -m pip install --user --upgrade twine
 ```
 If this does not work, try the following:
