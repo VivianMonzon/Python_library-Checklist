@@ -51,7 +51,7 @@ The following folder structure can be used as an example: <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;   -- test_file.py <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;   -- CodeFolder (link) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py (link) <br/>
 
 Then, the code-file can be imported as the following:
 ```python
@@ -121,4 +121,35 @@ $ conda install -c anaconda sphinx_rtd_theme
 ```
 
 ## Release your library on PyPI (Python Package Index):
-Uploading your library on PyPI makes it directly public. In case you would first like to see how it looks like, you can use ([TestPyPI](https://test.pypi.org/ "TestPyPI")) instead of ([PyPI](https://pypi.org/ "PyPI")).
+Uploading your library on PyPI makes it directly public. In case you would first like to see how it looks like, you can use [TestPyPI](https://test.pypi.org/ "TestPyPI") instead of [PyPI](https://pypi.org/ "PyPI"). Either way, the following steps have to be done:
+- [ ] register on PyPI / TestPyPI
+- [ ] if no setup.py file is available it has to be written. This file is an build script for setuptools.
+- [ ] install the latest version of wheel:
+```python
+$ python3 -m pip install --user --upgrade setuptools wheel
+```
+- [ ] build archives based on the setup.py file. This command should generate the dist folder, containing two files:
+```python
+$ python3 setup.py sdist bdist_wheel
+```
+- [ ] install twine:
+```python
+$ python3 -m pip install --user --upgrade twine
+```
+If this does not work, try the following:
+```
+$ python3.6 -m pip install --user --upgrade twine
+$ conda install -c conda-forge twine
+$ conda install -c pbrod twine
+```
+Make sure to have the newest version (twine 1.11.0 or higher) installed. <br/>
+Now twine can be run to upload the archives under dist ([Uploading by twine](https://github.com/pypa/twine "Uploading by twine")). <br/>
+For TestPyPI:
+```
+$ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+For PyPI:
+```
+$ twine upload dist/*
+```
+For more information the [Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/ "Packaging Python Projects") is recommended.
