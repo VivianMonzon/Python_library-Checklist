@@ -119,6 +119,10 @@ html_theme = "sphinx_rtd_theme"
 $ pip install sphinx_rtd_theme
 $ conda install -c anaconda sphinx_rtd_theme
 ```
+- [ ] Build html files by running in the docs folder the following:
+```
+make html
+```
 
 ## Release your library on PyPI (Python Package Index):
 Uploading your library on PyPI makes it directly public. In case you would first like to see how it looks like, you can use [TestPyPI](https://test.pypi.org/ "TestPyPI") instead of [PyPI](https://pypi.org/ "PyPI"). Either way, the following steps have to be done:
@@ -152,4 +156,24 @@ For PyPI:
 ```
 $ twine upload dist/*
 ```
+Now your library should be able to be installed by running:
+For TestPyPI
+```
+python3 -m pip install --index-url https://test.pypi.org/simple/ your_library
+```
+Or for PyPI:
+```
+pip install your_library
+```
 For more information the [Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/ "Packaging Python Projects") is recommended.
+
+## Read the Docs
+To build a documentation website out of the documentation files, Read the Docs can be used.
+- [ ] register for Read the Docs ([Read the Docs-Sign up](https://readthedocs.org/accounts/signup/ "Sign up")) or sign in with Git
+- [ ] Import a Project: here you can import your Git Repository
+- [ ] enter the required information and build your project
+- [ ] Go to 'Admin' within your project and then to Integration. Copy the URL
+- [ ] Go to Settings within your Git Repository. Then go to 'Webhooks' and click 'Add webhook'. Add the copied URL to 'Payload URL'. The further configuration can left unchanged. At the end click 'Add webhook'.
+- [ ] Go back to your project on Read the Docs and try to build it again. This time it should pass.
+If it is not passing, click on the last version, which did not pass and try to solve the error. Otherwise, you can click on 'View Docs' to see your documentation. <br/>
+The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now. 
