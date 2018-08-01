@@ -47,8 +47,8 @@ The following folder structure can be used as an example: <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;   | <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;   -- test_file.py <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;   -- CodeFolder (link) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      | <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      -- CodeFile.py <br/>
 
 Then, the code-file can be imported as the following:
 ```python
