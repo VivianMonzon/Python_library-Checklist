@@ -169,11 +169,11 @@ For more information the [Python Packaging User Guide](https://packaging.python.
 
 ## Read the Docs
 To build a documentation website out of the documentation files, Read the Docs can be used.
-- [ ] register for Read the Docs ([Read the Docs-Sign up](https://readthedocs.org/accounts/signup/ "Sign up")) or sign in with Git
-- [ ] Import a Project: here you can import your Git Repository
-- [ ] enter the required information and build your project
-- [ ] Go to 'Admin' within your project and then to Integration. Copy the URL
+- [ ] Register for Read the Docs ([Read the Docs-Sign up](https://readthedocs.org/accounts/signup/ "Sign up")) or sign in with Git.
+- [ ] Import a Project: here you can import your Git Repository.
+- [ ] Enter the required information and build your project.
+- [ ] Go to 'Admin' within your project and then to Integration. Copy the URL.
 - [ ] Go to Settings within your Git Repository. Then go to 'Webhooks' and click 'Add webhook'. Add the copied URL to 'Payload URL'. The further configuration can left unchanged. At the end click 'Add webhook'.
-- [ ] Go back to your project on Read the Docs and try to build it again. This time it should pass.
+- [ ] Go back to your project on Read the Docs and try to build it again. This time it should pass. <br/>
 If it is not passing, click on the last version, which did not pass and try to solve the error. Otherwise, you can click on 'View Docs' to see your documentation. <br/>
 The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now. 
