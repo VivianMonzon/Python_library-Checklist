@@ -1,14 +1,15 @@
 *Which points have to be done to write a library:*
-* TODO Checklist [0/4]
+* TODO Checklist [0/8]
 ** TODO Brainstorming: 
 *** TODO: What is the need for writing this library
 *** TODO: What should the library be able to do (which functions should be included).
-
 ** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/0]: 
 *** TODO: install cookiecutter: 
-- $ pip install --user cookiecutter
-- $ conda install cookiecutter
-- $ sudo apt-get install cookiecutter
+#+BEGIN_QUOTE
+- $ pip install --user cookiecutter \\
+- $ conda install cookiecutter \\
+- $ sudo apt-get install cookiecutter \\
+#+END_QUOTE
 *** TODO: chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 - $ git clone git@github.com:audreyr/cookiecutter-pypackage.git
 - $ cookiecutter cookiecutter-pypackage/
@@ -31,16 +32,25 @@ In case that the code file is not in the tests folder, but in another folder (e.
 $ ln -s path/to/code_file/folder link/destination
 
 The following folder structure can be used as an example: <br/>
-* \project 
-** CodeFolder 
-*** CodeFile.py 
-** testsFolder 
-*** test_file.py 
-*** CodeFolder (link) 
-**** CodeFile.py (link)
+\project 
+#+BEGIN_CENTER
+CodeFolder 
+#+BEIG_CENTER
+CodeFile.py 
+#+END_CENTER
+testsFolder 
+#+BEGIN_CENTER
+test_file.py 
+CodeFolder (link) 
+#+BEGIN_CENTER
+CodeFile.py (link)
+#+END_CENTER
+#+END_CENTER
+#+END_CENTER
 
-Then, the code-file can be imported as the following:
+Then, the code-file can be imported as the following: \\
 import CodeFolder.CodeFile as shortcut
+
 **** TODO write test functions: 
 'assert' expected outcome to library generated outcome
 The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
