@@ -6,13 +6,13 @@
 *** TODO What should the library be able to do (which functions should be included).
 ** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/2]: 
 *** TODO Install cookiecutter: 
-#+BEGIN_VERSE
 #+BEGIN_QUOTE
 $ pip install --user cookiecutter \\
-$ conda install cookiecutter\\
+
+$ conda install cookiecutter \\
+
 $ sudo apt-get install cookiecutter
 #+END_QUOTE
-#+END_VERSE
 *** TODO Chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 #+BEGIN_QUOTE
 $ git clone git@github.com:audreyr/cookiecutter-pypackage.git \\
