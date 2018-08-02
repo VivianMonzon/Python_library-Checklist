@@ -16,6 +16,7 @@ $ sudo apt-get install cookiecutter
 *** TODO Chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 #+BEGIN_QUOTE
 $ git clone git@github.com:audreyr/cookiecutter-pypackage.git \\
+
 $ cookiecutter cookiecutter-pypackage/
 #+END_QUOTE
 Or directly from the Git Repository (gh: Github):
@@ -30,6 +31,7 @@ Cookiecutter generates then a project corresponding to your entered values. Cook
 *** TODO Install pytest:
 #+BEGIN_QUOTE
 $ pip install -U pytest
+
 $ conda install -c anaconda pytest
 #+END_QUOTE
 *** TODO Write your tests ([[http://docs.pytest.org/en/latest/getting-started.html][Getting started with Pytest]])
@@ -43,38 +45,24 @@ In case that the code file is not in the tests folder, but in another folder (e.
 $ ln -s path/to/code_file/folder link/destination
 #+END_QUOTE
 The following folder structure can be used as an example: \\
-#+BEGIN_VERSE
-\project \\
-#+BEGIN_CENTER
-    CodeFolder \\
-#+BEGIN_CENTER
-        CodeFile.py \\
-#+END_CENTER
-    testsFolder \\
-#+BEGIN_CENTER
-        test_file.py \\
-        CodeFolder (link) \\
-#+BEGIN_CENTER
-            CodeFile.py (link) \\
-#+END_CENTER
-#+END_CENTER
-#+END_CENTER
-#+END_VERSE
-
-Then, the code-file can be imported as the following: \\
+The root folder 'project-name' contains two folder, one is the 'code' folder with the code file, and the other one is the 'tests' folder. 
+This 'tests' folder again contains the test file ('test_file.py') and a linked 'code' folder with again the code file. \\
+Then, the code-file can be imported as the following:
 #+BEGIN_QUOTE
 import CodeFolder.CodeFile as shortcut
 #+END_QUOTE
 **** TODO write test functions: 
-'assert' expected outcome to library generated outcome
-The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
+- 'assert' expected outcome to library generated outcome
+- The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
 *** TODO Write your code: 
 Adapted to the test_functions a code has to be written so that the tests can pass.
 ** TODO Documentation with sphinx [0/5]
 *** TODO Install sphinx (different options):
 #+BEGIN_QUOTE
 $ apt-get install python-sphinx
+
 $ pip install sphinx
+
 $ conda install -c anaconda sphinx
 #+END_QUOTE
 *** TODO Run sphinx:
@@ -124,6 +112,7 @@ html_theme = "sphinx_rtd_theme"
 **** TODO Install sphinx_rtd_theme:
 #+BEGIN_QUOTE
 $ pip install sphinx_rtd_theme
+
 $ conda install -c anaconda sphinx_rtd_theme
 #+END_QUOTE
 **** TODO Build html files by running in the docs folder the following:
@@ -149,10 +138,12 @@ $ python3 -m pip install --user --upgrade twine
 If this does not work, try the following:
 #+BEGIN_QUOTE
 $ python3.6 -m pip install --user --upgrade twine
+
 $ conda install -c conda-forge twine
+
 $ conda install -c pbrod twine
 #+END_QUOTE
-Make sure to have the newest version (twine 1.11.0 or higher) installed. 
+Make sure to have the newest version (twine 1.11.0 or higher) installed. \\
 Now twine can be run to upload the archives under dist ([[http://github.com/pypa/twine][Uploading by Twine]]).
 For TestPyPI:
 #+BEGIN_QUOTE
@@ -162,7 +153,7 @@ For PyPI:
 #+BEGIN_QUOTE
 $ twine upload dist/*
 #+END_QUOTE
-Now your library should be able to be installed by running:
+Now your library should be able to be installed by running: \\
 For TestPyPI
 #+BEGIN_QUOTE
 python3 -m pip install --index-url https://test.pypi.org/simple/ your_library
