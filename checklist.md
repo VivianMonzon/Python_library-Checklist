@@ -1,4 +1,4 @@
-# Which points have to be done in the process of writing a library:
+# Points, which have to be done in the process of generating a Python library:
 
 ## Brainstorming: 
 - [ ] What is the need for writing this library
@@ -20,15 +20,17 @@ Or directly from the repository (gh: Github):
 ```
 $ cookiecutter gh:audreyr/cookiecutter-pypackage
 ```
-Cookiecutter generates then a project corresponding to your entered values. Cookiecutter-pypackage generates a folder named after the project name, which includes several files, as e.g. 'AUTHORS.rst', 'LICENSE' or 'requirements_dev.txt' and the three folder 'project-name_test', 'docs' and 'tests', which again contain several files, which are requiered for the project.
+Cookiecutter generates then a project corresponding to your entered values. <br/>
+The template Cookiecutter-pypackage generates a folder named after the project name, which includes several files, as e.g. 'AUTHORS.rst', 'LICENSE' or 'requirements_dev.txt' and the three folder 'project-name_test', 'docs' and 'tests', which again contain several files, which are requiered for the project.
 
 ## Create a Git Repository:
 To have at the end an open source software and to have your work safed it is highly recommended to create a Git Repository.
 
 ## Testing and code writing:
-- [ ] Install pytest: 
+- [ ] Install pytest (different options): 
 ```
 $ pip install -U pytest
+$ conda install -c anaconda pytest
 ```
 - [ ] Write your tests ([Pytest Introduction](https://docs.pytest.org/en/latest/getting-started.html "Getting started with Pytest")): 
 - The test_file (tests/test_project_name_test.py) as well as the test function names need to start with 'test_'.
@@ -62,6 +64,19 @@ import CodeFolder.CodeFile as shortcut
 - The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
 - [ ] Write your code: 
 - Adapted to the test_functions a code has to be written so that the tests can pass.
+### Check the percentage of code, which is already covered by a test ([Coverage.py](https://coverage.readthedocs.io/en/coverage-4.5.1a/ "Coverage.py")):
+- [ ] install Coverage.py (different options):
+```
+$ pip install coverage
+$ conda install -c anaconda coverage
+```
+- [ ] run coverage in the test folder:
+```
+$ coverage run -m pytest
+$ coverage report
+$ coverage html
+$ firefox htmlcov/index.html
+```
 
 ## Documentation with sphinx:
 - [ ] Install sphinx (different options):
