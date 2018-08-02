@@ -165,7 +165,6 @@ pip install your_library
 #+END_QUOTE
 For more information the [[http://packaging.python.org/tutorials/packaging-projects/][Python Packaging User Guide]] is recommended.
 
-
 ** TODO Read the Docs [0/6]
 To build a documentation website out of the documentation files, Read the Docs can be used.
 *** TODO Register for Read the Docs ([[https://readthedocs.org/accounts/signup/][Read the Docs - Sign up]]) or sign in with Git.
@@ -177,15 +176,13 @@ To build a documentation website out of the documentation files, Read the Docs c
 If it is not passing, click on the lastest version, which did not pass and try to solve the error. 
 When it passed, you can click on 'View Docs' to see your documentation. 
 The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now and able to see from the PyPI webpage. 
-
-
 ** TODO Travis CI [0/4]
 With the continuous integration service Travis CI your GitHub project can be build and tested.
 *** TODO sign in with GitHub (or create a new account)
 *** TODO Add or enable a Repository you want to build
-*** TODO Add, if not already available, a '.travis.yml' file, which can loook as the following:
-# Config file for automatic testing at travis-ci.org
+*** TODO Add, if not already available, a '.travis.yml' file, which can loook as the following (please see raw script):
 #+BEGIN_QUOTE
+# Config file for automatic testing at travis-ci.org
 language: python
 python:
   - 3.6
