@@ -1,8 +1,8 @@
-# Which points have to be done to write a library:
+# Which points have to be done in the process of writing a library:
 
 ## Brainstorming: 
 - [ ] What is the need for writing this library
-- [ ] What should the library be able to do - which functions.
+- [ ] What should the library be able to do (which functions should be included).
 
 ## Folder and files organisation as e.g. with cookiecutter ([Cookiecutter documentation](http://cookiecutter.readthedocs.io/en/latest/index.html)): 
 - [ ] Install cookiecutter (different options): 
@@ -22,8 +22,8 @@ $ cookiecutter gh:audreyr/cookiecutter-pypackage
 ```
 Cookiecutter generates then a project corresponding to your entered values. Cookiecutter-pypackage generates a folder named after the project name, which includes several files, as e.g. 'AUTHORS.rst', 'LICENSE' or 'requirements_dev.txt' and the three folder 'project-name_test', 'docs' and 'tests', which again contain several files, which are requiered for the project.
 
-## Create a git repository:
-To have at the end an open source software and to have your work safed it is highly recommended to create a git repository.
+## Create a Git Repository:
+To have at the end an open source software and to have your work safed it is highly recommended to create a Git Repository.
 
 ## Testing and code writing:
 - [ ] Install pytest: 
@@ -156,7 +156,7 @@ For PyPI:
 ```
 $ twine upload dist/*
 ```
-Now your library should be able to be installed by running:
+Now your library should be able to be installed by running: <br/>
 For TestPyPI
 ```
 python3 -m pip install --index-url https://test.pypi.org/simple/ your_library
@@ -176,8 +176,9 @@ To build a documentation website out of the documentation files, Read the Docs c
 - [ ] Go to Settings within your Git Repository. Then go to 'Webhooks' and click 'Add webhook'. Add the copied URL to 'Payload URL'. The further configuration can left unchanged. At the end click 'Add webhook'.
 - [ ] Go back to your project on Read the Docs and try to build it again. This time it should pass. <br/>
 
-If it is not passing, click on the last version, which did not pass and try to solve the error. Otherwise, you can click on 'View Docs' to see your documentation. <br/>
-The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now. <br/>
+If it is not passing, click on the lastest version, which did not pass and try to solve the error. <br/>
+When it passed, you can click on 'View Docs' to see your documentation. <br/>
+The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now and able to see from the PyPI webpage. <br/>
 
 ## Travis CI
 With the continuous integration service Travis CI your GitHub project can be build and tested.
@@ -198,5 +199,5 @@ install:
 # command to run tests
 script: cd tests && pytest && cd ..
 ```
-- [ ] Add, commit and push this '.travis.yml' file to your Git Repositroy.
-Thereby and for every other pushed change, a Travis CI build should be triggered. ([Getting started with Travis CI](https://docs.travis-ci.com/user/getting-started/ "Travis CI Introduction"))
+- [ ] Add, commit and push this '.travis.yml' file to your Git Repository.
+Thereby, and for every other pushed change, a Travis CI build should be triggered ([Getting started with Travis CI](https://docs.travis-ci.com/user/getting-started/ "Travis CI Introduction")).
