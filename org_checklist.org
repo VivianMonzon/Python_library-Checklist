@@ -1,18 +1,18 @@
-*Which points have to be done to write a library:*
+***Which points have to be done to write a library:***
 * TODO Checklist [0/8]
-** TODO Brainstorming: 
-*** TODO: What is the need for writing this library
-*** TODO: What should the library be able to do (which functions should be included).
-** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/0]: 
-*** TODO: install cookiecutter: 
+** TODO Brainstorming [0/2]: 
+*** TODO What is the need for writing this library
+*** TODO What should the library be able to do (which functions should be included).
+** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/2]: 
+*** TODO Install cookiecutter: 
 #+BEGIN_QUOTE
 $ pip install --user cookiecutter \\
 $ conda install cookiecutter \\
 $ sudo apt-get install cookiecutter \\
 #+END_QUOTE
-*** TODO: chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
+*** TODO Chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 #+BEGIN_QUOTE
-$ git clone git@github.com:audreyr/cookiecutter-pypackage.git
+$ git clone git@github.com:audreyr/cookiecutter-pypackage.git \\
 $ cookiecutter cookiecutter-pypackage/
 #+END_QUOTE
 Or directly from the Git Repository (gh: Github):
@@ -22,9 +22,8 @@ $ cookiecutter gh:audreyr/cookiecutter-pypackage
 Cookiecutter generates then a project corresponding to your entered values. Cookiecutter-pypackage generates a folder named after the project name, which includes several files, as e.g. 'AUTHORS.rst', 'LICENSE' or 'requirements_dev.txt' and the three folder 'project-name_test', 'docs' and 'tests', which again contain several files, which are requiered for the project.
 
 ** TODO Create a Git Repository
-To have at the end an open source software and to have your work safed it is highly recommended to create a Git Repository.
-
-** TODO Testing and code writing
+- To have at the end an open source software and to have your work safed it is highly recommended to create a Git Repository.
+** TODO Testing and code writing [0/3]
 *** TODO Install pytest:
 #+BEGIN_QUOTE
 $ pip install -U pytest
@@ -66,7 +65,6 @@ import CodeFolder.CodeFile as shortcut
 The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
 *** TODO Write your code: 
 Adapted to the test_functions a code has to be written so that the tests can pass.
-
 ** TODO Documentation with sphinx [0/5]
 *** TODO Install sphinx (different options):
 #+BEGIN_QUOTE
