@@ -1,3 +1,4 @@
+#+OPTIONS: \n:t
 *Which points have to be done to write a library:*
 #+OPTIONS: \n:t
 * TODO Checklist [0/8]
@@ -44,7 +45,7 @@ The following folder structure can be used as an example: \\
 \project \\
 #+BEGIN_CENTER
 CodeFolder \\
-#+BEIG_CENTER
+#+BEGIN_CENTER
 CodeFile.py \\
 #+END_CENTER
 testsFolder \\
