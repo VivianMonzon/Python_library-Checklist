@@ -1,5 +1,5 @@
 #+OPTIONS: \n:t
-*Which points have to be done to write a library:*
+#+OPTIONS: H:4 Which points have to be done to write a library:
 #+OPTIONS: \n:t
 * TODO Checklist [0/8]
 ** TODO Brainstorming [0/2]: 
@@ -8,6 +8,7 @@
 ** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/2]: 
 *** TODO Install cookiecutter: 
 #+BEGIN_QUOTE
+#+OPTIONS: \n:t
 $ pip install --user cookiecutter \\
 $ conda install cookiecutter \\
 $ sudo apt-get install cookiecutter \\
