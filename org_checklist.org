@@ -1,5 +1,4 @@
-#+OPTIONS: \n:t
-#+OPTIONS: H:4 Which points have to be done to write a library:
+*Which points have to be done to write a library:*
 #+OPTIONS: \n:t
 * TODO Checklist [0/8]
 ** TODO Brainstorming [0/2]: 
@@ -8,10 +7,9 @@
 ** TODO Folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]) [0/2]: 
 *** TODO Install cookiecutter: 
 #+BEGIN_QUOTE
-#+OPTIONS: \n:t
 $ pip install --user cookiecutter \\
-$ conda install cookiecutter \\
-$ sudo apt-get install cookiecutter \\
+$ conda install cookiecutter\\
+$ sudo apt-get install cookiecutter
 #+END_QUOTE
 *** TODO Chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
 #+BEGIN_QUOTE
@@ -45,16 +43,16 @@ $ ln -s path/to/code_file/folder link/destination
 The following folder structure can be used as an example: \\
 \project \\
 #+BEGIN_CENTER
-CodeFolder \\
+    CodeFolder \\
 #+BEGIN_CENTER
-CodeFile.py \\
+        CodeFile.py \\
 #+END_CENTER
-testsFolder \\
+    testsFolder \\
 #+BEGIN_CENTER
-test_file.py \\
-CodeFolder (link) \\
+        test_file.py \\
+        CodeFolder (link) \\
 #+BEGIN_CENTER
-CodeFile.py (link) \\
+            CodeFile.py (link) \\
 #+END_CENTER
 #+END_CENTER
 #+END_CENTER
