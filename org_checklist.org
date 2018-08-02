@@ -57,6 +57,19 @@ import CodeFolder.CodeFile as shortcut
 - The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
 *** TODO Write your code: 
 Adapted to the test_functions a code has to be written so that the tests can pass.
+*** TODO Check the percentage of code, which is already covered by a test ([[https://coverage.readthedocs.io/en/coverage-4.5.1a/][Coverage.py]]):
+**** TODO Install Coverage.py (different options):
+#+BEGIN_QUOTE
+$ pip install coverage
+$ conda install -c anaconda coverage
+#+END_QUOTE
+**** TODO run coverage in the test folder:
+#+BEGIN_QUOTE
+$ coverage run -m pytest
+$ coverage report
+$ coverage html
+$ firefox htmlcov/index.html
+#+END_QUOTE
 ** TODO Documentation with sphinx [0/5]
 *** TODO Install sphinx (different options):
 #+BEGIN_QUOTE
