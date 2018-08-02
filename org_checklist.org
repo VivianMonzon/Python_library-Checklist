@@ -146,7 +146,7 @@ $ python3 -m pip install --user --upgrade setuptools wheel
 $ python3 setup.py sdist bdist_wheel
 #+END_QUOTE
 *** TODO install twine:
-#+BEGN_QUOTE
+#+BEGIN_QUOTE
 $ python3 -m pip install --user --upgrade twine
 #+END_QUOTE
 If this does not work, try the following:
