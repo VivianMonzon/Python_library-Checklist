@@ -177,4 +177,26 @@ To build a documentation website out of the documentation files, Read the Docs c
 - [ ] Go back to your project on Read the Docs and try to build it again. This time it should pass. <br/>
 
 If it is not passing, click on the last version, which did not pass and try to solve the error. Otherwise, you can click on 'View Docs' to see your documentation. <br/>
-The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now. 
+The Git Repository should be connected to PyPI by the setup.py file and to Read the Docs by importing the Git Repository. Therefore, if you go to your project on PyPI, the documentation 'docs' should be passing now. <br/>
+
+## Travis CI
+With the continuous integration service Travis CI your GitHub project can be build and tested.
+- [ ] sign in with GitHub (or create a new account)
+- [ ] Add or enable a Repository you want to build
+- [ ] Add a '.travis.yml' file, which can loook as the following:
+```
+# Config file for automatic testing at travis-ci.org
+
+language: python
+python:
+  - 3.6
+
+# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+install:
+  - "pip install -r requirements_dev.txt"
+
+# command to run tests
+script: cd tests && pytest && cd ..
+```
+- [ ] Add, commit and push this '.travis.yml' file to your Git Repositroy.
+Thereby and for every other pushed change, a Travis CI build should be triggered. ([Getting started with Travis CI](https://docs.travis-ci.com/user/getting-started/ "Travis CI Introduction"))
