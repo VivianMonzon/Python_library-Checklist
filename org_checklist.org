@@ -1,4 +1,5 @@
-***Which points have to be done to write a library:***
+*Which points have to be done to write a library:*
+#+OPTIONS: \n:t
 * TODO Checklist [0/8]
 ** TODO Brainstorming [0/2]: 
 *** TODO What is the need for writing this library
