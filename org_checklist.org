@@ -26,7 +26,7 @@ Cookiecutter generates then a project corresponding to your entered values. Cook
 
 ** TODO Create a Git Repository
 - To have at the end an open source software and to have your work safed it is highly recommended to create a Git Repository.
-** TODO Testing and code writing [0/3]
+** TODO Testing and code writing [0/4]
 *** TODO Install pytest:
 #+BEGIN_QUOTE
 $ pip install -U pytest
