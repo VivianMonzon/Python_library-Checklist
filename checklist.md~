@@ -1,0 +1,57 @@
+*Which points have to be done to write a library:*
+
+* TODO: brainstorming: 
+** [ ] What is the need for writing this library
+** [x] What should the library be able to do - which functions.
+* TODO: folder and files organisation as e.g. with cookiecutter ([[http://cookiecutter.readthedocs.io/en/latest/index.html][cookiecutter documentation]]): 
+[ ] install cookiecutter: 
+- $ pip install --user cookiecutter
+- $ conda install cookiecutter
+- $ sudo apt-get install cookiecutter
+** TODO: chose and clone a cookiecutter template (e.g. pypackage) and generate a project:
+- $ git clone git@github.com:audreyr/cookiecutter-pypackage.git
+- $ cookiecutter cookiecutter-pypackage/
+Or directly from the repository (gh: Github):
+- $ cookiecutter gh:audreyr/cookiecutter-pypackage
+** Cookiecutter generates then a project corresponding to your entered values with the following structre: 
+project_name\
+- AUTHORS.rst
+- CONTRIBUTING.rst
+- *project_name_test*
+  - cli.py
+  - project_name_test.py
+  - __init__.py
+- *docs*
+  - authors.rst
+  - conf.py
+  - contributing.rst
+  - history.rst
+  - index.rst
+  - installation.rst
+  - make.bat
+  - Makefile
+  - readme.rst
+  - usage.rst
+- HISTORY.rst
+- LICENSE
+- Makefile
+- MANIFEST.in
+- README.rst
+- requirements_dev.txt
+- setup.cfg
+- setup.py
+- *tests*
+  - __init__.py
+  - test_project_name_test.py
+- tox.ini
+- travis_pypi_setup.py 
+* TODO: testing and code writing:
+** TODO install pytest: 
+- $ pip install -U pytest
+** TODO write your tests ([[https://docs.pytest.org/en/latest/getting-started.html][Getting started with Pytest]]): 
+- The test_file (tests/test_project_name_test.py) as well as the test function names need to start with 'test_'.
+- import the code-file (project_name.py): 'import project_name as project_name_shortcut'
+- write test functions: 'assert' expected outcome to library generated outcome
+- The tests will first fail, because no code is available. Now a code file has to be written, adapted to the tests.
+** TODO write your code: 
+- Adapted to the test_functions a code has to be written so that the tests can pass.
